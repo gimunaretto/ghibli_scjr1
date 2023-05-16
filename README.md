@@ -1,16 +1,23 @@
-# ghibli_scjr1
+### TURMA: 1SCJR
+### MOBILE DEVELOPMENT
 
-A new Flutter project.
+- 347328 - THIAGO RODRIGUES DIAS
+- 347114 - DANIEL DA CUNHA NOBREGA
+- 346982 - GIULIANA FERNANDES MUNARETTO
+- 346669 - JORGE ROSIVAN RODRIGUES BATISTA
+- 347374 - PEDRO SANTANA
+- 346541 - ROBERTO GUEDES GARRONES  
+--------
 
-## Getting Started
+#### Link da documentação api que retorna os filmes do StudioGhibli: 
+https://newghibliapi.herokuapp.com/
+1) Este aplicativo exibe em forma de ListView os filmes produzidos pelo studio;
+2) É possível filtrar a lista clicando no menu superior direito, a barra de pesquisa permanece oculta por default;
+3) Ao clicar no card da ListView é possível ver a descrição do filme;
+4) O aplicativo possui uma SplashScreen que verifica se o usuário está logado ao não, redirecionando-o de acordo.
+5) Foi utilizado Cubit/Bloc no projeto.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Passos:  
+1) Flutter clean;
+2) Flutter pub get;
+3) Rodar a aplicação;
