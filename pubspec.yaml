@@ -1,0 +1,44 @@
+name: ghibli_scjr1
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.3 <3.0.0"
+
+dependencies:
+  another_flushbar: ^1.12.30
+  auto_size_text: ^3.0.0
+  cupertino_icons: ^1.0.2
+  firebase_auth: ^4.3.0
+  firebase_core: ^2.8.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+  flutter_gif: ^0.0.4
+  flutter_rating_bar: ^4.0.1
+  flutter_speed_dial: ^6.2.0
+  http: ^0.13.6
+  jumping_dot: ^0.0.6
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand-Light.ttf
+          weight: 100
+        - asset: assets/fonts/Quicksand-Regular.ttf
+        - asset: assets/fonts/Quicksand-Bold.ttf
+          weight: 700

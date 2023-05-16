@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "359495782433",
+    "project_id": "ghibli-scjr1",
+    "storage_bucket": "ghibli-scjr1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359495782433:android:a62a29d100802bc2f75360",
+        "android_client_info": {
+          "package_name": "com.ghibli.scjr1.ghibli_scjr1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359495782433-sdj484un8o0r624mrg104594228nalvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExvcMBLjD2yGTn2Fb8huuX4u_L7L2i40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359495782433-sdj484un8o0r624mrg104594228nalvj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "359495782433-21af4c1h9a8ivpao0pfekeq8u9nhcebs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ghibli.scjr1.ghibliScjr1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
