@@ -12,6 +12,7 @@ dependencies:
   another_flushbar: ^1.12.30
   auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.5
   firebase_auth: ^4.3.0
   firebase_core: ^2.8.0
   flutter:

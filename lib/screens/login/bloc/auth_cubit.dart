@@ -6,7 +6,7 @@ import 'auth_cubit_state.dart';
 
 class AuthCubit extends Cubit<AuthCubitState> {
   AuthCubit(AuthCubitState authCubitState, this._firebaseAuth)
-      : super(AuthCubitState(
+      : super(const AuthCubitState(
           authAuthenticated: false,
           authLoading: false,
           errorMessage: '',
@@ -38,11 +38,10 @@ class AuthCubit extends Cubit<AuthCubitState> {
     });
   }
 
-  void checkAuthStatus() {
+  void checkAuthStatus() async {
     final user = _firebaseAuth.currentUser;
-    if (user != null) {
-      emit(state.copyWith(authAuthenticated: true));
-    }
+    Future.delayed(const Duration(seconds: 2))
+        .then((_) => emit(state.copyWith(authAuthenticated: user != null)));
   }
 
   void signOut() {
@@ -55,12 +54,13 @@ class AuthCubitProvider extends BlocProvider<AuthCubit> {
   AuthCubitProvider({super.key, Widget? child})
       : super(
           create: (context) => AuthCubit(
-              AuthCubitState(
+              const AuthCubitState(
                 authAuthenticated: false,
                 authLoading: false,
                 errorMessage: '',
               ),
-              FirebaseAuth.instance),
+              FirebaseAuth.instance)
+            ..checkAuthStatus(),
           child: child,
         );
 

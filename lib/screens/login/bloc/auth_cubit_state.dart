@@ -1,5 +1,7 @@
-class AuthCubitState {
-  AuthCubitState({
+import 'package:equatable/equatable.dart';
+
+class AuthCubitState extends Equatable {
+  const AuthCubitState({
     required this.authLoading,
     required this.authAuthenticated,
     required this.errorMessage,
@@ -16,4 +18,7 @@ class AuthCubitState {
         authLoading: authLoading ?? this.authLoading,
         errorMessage: errorMessage ?? this.errorMessage,
       );
+
+  @override
+  List<Object?> get props => [DateTime.now()];
 }
