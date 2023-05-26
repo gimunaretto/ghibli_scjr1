@@ -1,49 +1,29 @@
 import 'package:flutter/material.dart';
 
 import '../../../configs/images.dart';
-import '../../../widget/flushbar_alert.dart';
 import '../../../widget/rounded_button.dart';
 import '../../../widget/rounded_text_field.dart';
 import '../../../widget/totoro_background.dart';
-import '../../movies/ui/movies_screen.dart';
 import '../../register/ui/register_screen.dart';
-import '../bloc/auth_cubit.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String id = '/login_screen';
-  LoginScreen(
+  const LoginScreen(
       {Key? key,
       required this.authenticateUser,
       required this.signOut,
-      required this.authAuthenticated,
-      required this.errorMessage,
       required this.authLoading})
       : super(key: key);
 
   final Function(String, String) authenticateUser;
 
   final Function() signOut;
-  final bool authAuthenticated;
   final bool authLoading;
-  final String errorMessage;
 
   @override
   Widget build(BuildContext context) {
     TextEditingController email = TextEditingController();
     TextEditingController password = TextEditingController();
-
-    Future.delayed(const Duration(seconds: 2)).then((_) {
-      if (errorMessage.isNotEmpty) {
-        return FlushbarAlert(
-                message: AuthCubitProvider.of(context).state.errorMessage,
-                isSuccess: false)
-            .build(context);
-      }
-      if (authAuthenticated) {
-        Navigator.pushReplacementNamed(context, MoviesScreen.id);
-      }
-    });
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -111,12 +91,6 @@ class LoginScreen extends StatelessWidget {
                                         authenticateUser(
                                           email.text,
                                           password.text,
-                                        );
-                                      }
-                                      if (authAuthenticated) {
-                                        Navigator.pushReplacementNamed(
-                                          context,
-                                          MoviesScreen.id,
                                         );
                                       }
                                     },
